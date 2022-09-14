@@ -1,0 +1,23 @@
+### SIGN UP
+POST http://localhost:8800/api/auth/signup
+Content-Type: application/json
+
+{
+    "name": "User",
+    "email": "user@gmail.com",
+    "password": "user",
+    "type": "user"
+}
+
+### SIGN IN  
+POST http://localhost:8800/api/auth/signin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+### CURRENT USER
+GET http://localhost:8800/api/auth/current-user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4

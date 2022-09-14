@@ -1,0 +1,40 @@
+### CREATE ORDER
+POST http://localhost:8800/api/order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwODEyOH0.c18UaC2-ESyy0lKJUeIWb4ERon1-5UqjIJY8o81HR24
+
+{
+    "cart": [
+        {
+            "productId": "631df5c06c9b690cba98b3ca",
+            "quantity": "4"
+        },
+        {
+            "productId": "631df5da6c9b690cba98b3cd",
+            "quantity": "2"
+        }
+    ],
+    "totalPrice": 4000,
+    "address": "Yangon"
+}
+
+### CHANGE ORDER STATUS
+POST http://localhost:8800/api/order/change-order-status/631df3ba6c9b690cba98b385
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4
+
+{
+    "status": 1
+}
+
+### GET ALL ORDERS
+GET http://localhost:8800/api/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4
+
+### ORDER ANALYTICS
+GET http://localhost:8800/api/order/analytics
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4
+
+### USER'S ORDERS
+GET http://localhost:8800/api/order/user/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4

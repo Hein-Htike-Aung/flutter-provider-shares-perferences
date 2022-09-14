@@ -1,0 +1,40 @@
+### CREATE PRODUCT
+POST http://localhost:8800/api/product
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwMjk1OH0.hiDvXFVKne7oCczuPb-xxAu8t_oJkacxPnn4xYJzNa0
+
+{
+    "name": "Knives",
+    "description": "killer",
+    "quantity": 10,
+    "price": 888,
+    "category": "Appliances"
+}
+
+### DELETE PRODUCT
+DELETE http://localhost:8800/api/product/631de4ac46b9064540e5a955
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwMjk1OH0.hiDvXFVKne7oCczuPb-xxAu8t_oJkacxPnn4xYJzNa0
+
+### RATE PRODUCT
+POST http://localhost:8800/api/product/rate-product/631de2ef46b9064540e5a945
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlNjYyOGQ1OTQ1NjBkY2EyZTc5MSIsImlhdCI6MTY2MjkwMzkwOH0.DDvKXwqqkYmx-ZBEVOqvAll5LXbuIA3LAaThQBtdpj0
+
+{
+    "rating": 5
+}
+
+
+### FIND PRODUCTS
+GET http://localhost:8800/api/product?category=Mobiles&name=iphone
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwMjk1OH0.hiDvXFVKne7oCczuPb-xxAu8t_oJkacxPnn4xYJzNa0
+
+### FIND PRODUCTS
+GET http://localhost:8800/api/product
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwMjk1OH0.hiDvXFVKne7oCczuPb-xxAu8t_oJkacxPnn4xYJzNa0
+
+### DEAL OF THE DAY
+GET http://localhost:8800/api/product/deal-of-day
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwMjk1OH0.hiDvXFVKne7oCczuPb-xxAu8t_oJkacxPnn4xYJzNa0

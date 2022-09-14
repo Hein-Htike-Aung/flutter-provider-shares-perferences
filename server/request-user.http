@@ -1,0 +1,18 @@
+### UPDATE CURRENT USER
+PATCH http://localhost:8800/api/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4
+
+{
+    "name": "updated Admin user"
+}
+
+
+### ADD TO CART
+POST http://localhost:8800/api/user/add-to-cart/631de2ef46b9064540e5a945
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4
+
+### REMOVE ITEM FROM CART
+DELETE http://localhost:8800/api/user/remove-from-cart/631de2ef46b9064540e5a945
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMWRlMmE5NDZiOTA2NDU0MGU1YTkzYyIsImlhdCI6MTY2MjkwNTk4OX0.umzytEw_3FhOcI8BIVNULbCVGGmtemEPbUJDW4CZDm4
+
